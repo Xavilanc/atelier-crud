@@ -2,12 +2,12 @@ const express = require("express");
 
 const router = express.Router();
 
-const itemControllers = require("./controllers/itemControllers");
+const tabletteControllers = require("./controllers/tabletteControllers");
 
-router.get("/items", itemControllers.browse);
-router.get("/items/:id", itemControllers.read);
-router.put("/items/:id", itemControllers.edit);
-router.post("/items", itemControllers.add);
-router.delete("/items/:id", itemControllers.destroy);
+router.get("/tablettes", tabletteControllers.getTablettes);
+router.get("/tablettes/:id", tabletteControllers.getTabletteById);
+router.put("/tablettes/.id", tabletteControllers.putTablette);
+router.post("/tablettes", tabletteControllers.postTablette);
+router.delete("/tablettes/:id", tabletteControllers.deleteTablette);
 
 module.exports = router;

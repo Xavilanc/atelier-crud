@@ -1,7 +1,7 @@
 const models = require("../models");
 
-const browse = (req, res) => {
-  models.item
+const getTablettes = (req, res) => {
+  models.tablettes
     .findAll()
     .then(([rows]) => {
       res.send(rows);
@@ -12,8 +12,8 @@ const browse = (req, res) => {
     });
 };
 
-const read = (req, res) => {
-  models.item
+const getTabletteById = (req, res) => {
+  models.tablettes
     .find(req.params.id)
     .then(([rows]) => {
       if (rows[0] == null) {
@@ -28,15 +28,15 @@ const read = (req, res) => {
     });
 };
 
-const edit = (req, res) => {
-  const item = req.body;
+const putTablette = (req, res) => {
+  const tablettes = req.body;
 
   // TODO validations (length, format...)
 
-  item.id = parseInt(req.params.id, 10);
+  tablettes.id = parseInt(req.params.id, 10);
 
-  models.item
-    .update(item)
+  models.tablettes
+    .update(tablettes)
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404);
@@ -50,13 +50,13 @@ const edit = (req, res) => {
     });
 };
 
-const add = (req, res) => {
-  const item = req.body;
+const postTablette = (req, res) => {
+  const tablettes = req.body;
 
   // TODO validations (length, format...)
 
-  models.item
-    .insert(item)
+  models.tablettes
+    .insert(tablettes)
     .then(([result]) => {
       res.location(`/items/${result.insertId}`).sendStatus(201);
     })
@@ -66,8 +66,8 @@ const add = (req, res) => {
     });
 };
 
-const destroy = (req, res) => {
-  models.item
+const deleteTablette = (req, res) => {
+  models.tablettes
     .delete(req.params.id)
     .then(([result]) => {
       if (result.affectedRows === 0) {
@@ -83,9 +83,9 @@ const destroy = (req, res) => {
 };
 
 module.exports = {
-  browse,
-  read,
-  edit,
-  add,
-  destroy,
+  getTablettes,
+  getTabletteById,
+  postTablette,
+  putTablette,
+  deleteTablette,
 };
