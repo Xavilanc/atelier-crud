@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./Pages.css";
-import { Link } from "react-router-dom";
+import ReturnButton from "@components/ReturnButton";
 
 function TabletteCreatePage() {
   const [tablette, setTablette] = useState({
@@ -74,9 +74,7 @@ function TabletteCreatePage() {
   return (
     <div>
       <h1>Votre tablette à bien été crée</h1>
-      <Link to="/">
-        <div className="return-button">Retour à l'accueil</div>
-      </Link>
+      <ReturnButton />
     </div>
   );
 }

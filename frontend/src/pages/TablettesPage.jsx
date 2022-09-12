@@ -1,3 +1,4 @@
+import ReturnButton from "@components/ReturnButton";
 import Tablette from "@components/Tablette";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -15,5 +16,10 @@ export default function TablettesPage() {
       .then((data) => setTablette(data));
   }, []);
 
-  return <Tablette tablette={tablette} />;
+  return (
+    <>
+      <Tablette tablette={tablette} />
+      <ReturnButton />
+    </>
+  );
 }

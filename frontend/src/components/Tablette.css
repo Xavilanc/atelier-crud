@@ -29,3 +29,14 @@ h2 {
   padding-left: 5%;
   padding-bottom: 2%;
 }
+
+.return-button {
+  background-color: gray;
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 5%;
+  padding: 1%;
+  border-radius: 15px;
+  font-weight: bold;
+  text-align: center;
+}
