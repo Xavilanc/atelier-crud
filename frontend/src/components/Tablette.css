@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+.tablette-list {
+  background-color: bisque;
+  border-radius: 15px;
+  margin: 2%;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+.brand {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding-left: 5%;
+}
+
+.packaging {
+  color: darkgreen;
+  font-weight: bold;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}

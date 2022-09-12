@@ -1,0 +1,43 @@
+.tablettes-title-box {
+  display: flex;
+  justify-content: end;
+  margin: 5%;
+}
+
+.create-tablette {
+  background-color: darkgray;
+  padding: 2%;
+  border-radius: 15px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+
+input {
+  margin: 2%;
+  padding: 2%;
+  border-radius: 15px;
+  border: solid 1px #127996;
+}
+
+h1 {
+  text-align: center;
+}
+
+.return-button {
+  background-color: gray;
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 5%;
+  padding: 1%;
+  border-radius: 15px;
+  font-weight: bold;
+  text-align: center;
+}
