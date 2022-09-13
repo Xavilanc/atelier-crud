@@ -1,5 +1,5 @@
-import TablettesList from "@components/TablettesList";
 import { Link } from "react-router-dom";
+import TablettesList from "../components/TablettesList";
 import "./Pages.css";
 
 export default function HomePage() {
