@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Tablette from "./Tablette";
 import "./Tablette.css";
+import TabletteForList from "./TabletteForList";
 
 function TablettesList() {
   const [tablettes, setTablettes] = useState("");
@@ -45,7 +45,7 @@ function TablettesList() {
         {tablettes &&
           tablettes.map((tablette) => (
             <Link to={`/tablettes/${tablette.id}`} key={tablette.id}>
-              <Tablette tablette={tablette} />
+              <TabletteForList tablette={tablette} />
             </Link>
           ))}
       </div>
