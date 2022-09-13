@@ -1,8 +1,8 @@
-import ReturnButton from "@components/ReturnButton";
-import Tablette from "@components/Tablette";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Tablette from "../components/Tablette";
+import ReturnButton from "../components/ReturnButton";
 
 export default function TablettesPage() {
   const [tablette, setTablette] = useState("");

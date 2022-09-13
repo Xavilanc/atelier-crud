@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./Pages.css";
-import ReturnButton from "@components/ReturnButton";
+import ReturnButton from "../components/ReturnButton";
 
 function TabletteCreatePage() {
   const [tablette, setTablette] = useState({
