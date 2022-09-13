@@ -18,6 +18,7 @@
   "plugins": ["react", "import"],
   "rules": {
     "no-console": "off",
+    "no-restricted-globals": ["error", "event", "fdescribe"],
     "no-restricted-syntax": [
       "error",
       {

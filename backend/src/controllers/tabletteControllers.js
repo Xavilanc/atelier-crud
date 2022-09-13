@@ -12,6 +12,18 @@ const getTablettes = (req, res) => {
     });
 };
 
+const getCoteDor = (req, res) => {
+  models.tablettes
+    .findAllCoteDor()
+    .then(([rows]) => {
+      res.send(rows);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 const getTabletteById = (req, res) => {
   models.tablettes
     .find(req.params.id)
@@ -84,6 +96,7 @@ const deleteTablette = (req, res) => {
 
 module.exports = {
   getTablettes,
+  getCoteDor,
   getTabletteById,
   postTablette,
   putTablette,

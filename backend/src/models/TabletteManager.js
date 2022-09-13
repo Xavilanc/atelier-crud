@@ -5,6 +5,12 @@ class TabletteManager extends AbstractManager {
     super({ table: "tablettes" });
   }
 
+  findAllCoteDor() {
+    return this.connection.query(
+      `select * from  ${this.table} where brand = "Côte d'Or"`
+    );
+  }
+
   insert(tablette) {
     return this.connection.query(
       `insert into ${this.table} (name, brand, packaging) values (?,?,?)`,

@@ -40,3 +40,34 @@ h2 {
   font-weight: bold;
   text-align: center;
 }
+
+.edit-button {
+  margin-left: 75%;
+  margin-bottom: 1%;
+  border-radius: 15px;
+  border: solid 1px black;
+  width: 20%;
+  cursor: pointer;
+  font-size: 2vw;
+}
+
+.create-tablette {
+  background-color: darkgray;
+  padding: 2%;
+  border-radius: 15px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.only-cotedor {
+  background-color: darkgray;
+  padding: 1%;
+  border-radius: 15px;
+  margin-right: 5%;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
